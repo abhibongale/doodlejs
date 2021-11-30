@@ -51,7 +51,7 @@ class DataObject {
     
 
     loadBytesData() {
-        console.log("loadBytesData");
+        console.log("LOAD BYTES DATA");
         let index = this.doodleLabelList.indexOf(this.label);
         //console.log("index: " +  index);
         let bytesObject = this.dataPreload[index];
@@ -60,7 +60,7 @@ class DataObject {
     }
 
     splitData() {
-        console.log("splitData");
+        console.log("SPLIT DATA");
         for (let i = 0; i < this.NUMDOODLE; i++) {
             let offset = i * this.BYTELEN; // keeping track of index
             //console.log("offset: " + offset);

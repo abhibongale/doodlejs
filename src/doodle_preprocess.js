@@ -16,13 +16,13 @@ class Preprocess {
     }
 
     prepareData(data, labels) {
-        console.log("prepare data");
+        console.log("PREPARE DATA MODULE RUNNING.....");
         let doodles = [];
         let labelsData = [];
         let returnedTensors = []; 
-
+        
         for (let row = 0; row < data.length; row++) {
-            let pixels = [];
+            let pixels = []; //pixels
             for (let col = 0; col < this.DATALENGTH; col++) {
                 pixels[col] = data[row][col] / 255;
             }
@@ -40,7 +40,7 @@ class Preprocess {
     }
 
     initializeData() {
-        console.log("INITIALIZE DATA");
+        console.log("INITIALIZE DATA MODULE RUNNING....");
         for (let i = 0; i < this.DOODLELABELLIST.length; i++) {
             let label = this.DOODLELABELLIST[i];
             dataObjectsArray[i] = new DataObject(label, this.DOODLELABELLIST, this.dataPreload);

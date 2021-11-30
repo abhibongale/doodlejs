@@ -6,12 +6,25 @@
 
         <title> Doodle Classifier </title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="./assets/style.css"/>
         <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.0.0/dist/tf.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/p5@1.4.0/lib/p5.js"></script>
     </head>
     <body>
+        <div id="canvas"></div>
+        <div>
+            <button class="btn btn-success" id="train">Train</button>
+            <button class="btn btn-primary" id="guess">Guess</button>
+            <button class="btn btn-warning" id="clear">Clear</button>
+        </div>
+        
+        <span class="alert alert-primary" id="training-alert" role="alert">Training...</span>
+        <span id="output" class="alert alert-success" role="alert"></span>
+
         <script src="./src/sketch.js"></script>
         <script src="./src/doodle_object.js"></script>
         <script src="./src/doodle_preprocess.js"></script>
+        <script src="./src/doodle_model.js"></script>
+        
     </body>
 </html>
