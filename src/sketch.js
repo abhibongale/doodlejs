@@ -5,11 +5,11 @@ const k = 10;
 let canvas;
 let dataObjectsArray = []; // contains all the data objects
 let dataPreload = []; // contains the arrays of preloaded data
-let model;
+let premodel;
 
 async function loadMyModel() {
-    model = await tf.loadLayersModel('model/model.json');
-    model.summary();
+    premodel = await tf.loadLayersModel('model/model.json');
+    premodel.summary();
   }
   
 
@@ -22,7 +22,7 @@ testingY = {};
 
 const NUMEACHDOODLE = 1000;
 const PROPORTION = 0.8;
-const DOODLELABELLIST = ["airplane", "beach", "bicycle"];
+const DOODLELABELLIST = ["flower", "cat", "bird"];
 
 function preload() {
     console.log("PRELOAD");
@@ -86,7 +86,7 @@ async function setup() {
         const inputs = getInputImage();
 
         // Predict
-        let guess = model.predict(tf.tensor([inputs]));
+        let guess = premodel.predict(tf.tensor([inputs]));
 
         // Format res to an array
         const rawProb = Array.from(guess.dataSync());
@@ -131,6 +131,30 @@ async function setup() {
         */
 
 
+    });
+
+    let mymodelButton = select("#mymodel");
+    mymodelButton.mousePressed(function (){
+        const inputs = getInputImage();
+        const inputImage = tf.util.flatten(inputs);
+        tensorToPredict = tf.tensor2d([inputImage]);
+        console.log("tensorToPredict: " + tensorToPredict);
+        let mymodel = model.predict(tensorToPredict, tfModel);
+        const rawProb = Array.from(mymodel.dataSync());
+
+        // Get top K res with index and probability
+        const rawProbWIndex = rawProb.map((probability, index) => {
+            return {
+                index,
+                probability
+            }
+        });
+
+        const sortProb = rawProbWIndex.sort((a, b) => b.probability - a.probability);
+        const topKClassWIndex = sortProb.slice(0, 3);
+        const topKRes = topKClassWIndex.map(i => `<br>${DOODLELABELLIST[i.index]} (${(i.probability.toFixed(2) * 100)}%)`);
+        const output = select("#output");
+        output.html(topKRes);
     });
 
     let clearButton = select("#clear");
