@@ -29,7 +29,7 @@ function preload() {
     let filename;
     for (let i = 0; i < DOODLELABELLIST.length; i++) {
         filename = DOODLELABELLIST[i].toLocaleLowerCase();
-        dataPreload[i] = loadBytes("../dataset/" + filename + ".bin");
+        dataPreload[i] = loadBytes("https://abhibongale.github.io/dataset/" + filename + ".bin");
     }
     //console.log("dataPreload: " + dataPreload);
     console.log("DONE");
