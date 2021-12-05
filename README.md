@@ -1,5 +1,5 @@
 # doodlejs - Doodle Classifier Using Tensorflow.js
-![](https://img.shields.io/badge/tensorflow%2Cjs-v2.0-yellow) ![](https://img.shields.io/badge/build-passing-yellowgreen)
+![](https://img.shields.io/badge/tensorflow%2Cjs-v2.0-yellow) ![](https://img.shields.io/badge/p5.js-v1.4-yellow) ![](https://img.shields.io/badge/build-passing-yellowgreen)
 
 Simple Doodle Classifier which recognize the three category a bird, a flower, & a cat.
 
