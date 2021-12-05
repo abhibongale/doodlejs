@@ -14,8 +14,8 @@ Simple Doodle Classifier which recognize the three categories a bird, a flower, 
 2. Model is three layer dense model.
 
 ## Technologies
-1. (Tensorflow.js v2.0)[https://www.tensorflow.org/]
-2. (P5.js v1.4)[https://p5js.org/]
+1. [Tensorflow.js v2.0](https://www.tensorflow.org/)
+2. [P5.js v1.4](https://p5js.org/)
 
 ## Launch
 [Launch!!](https://abhibongale.github.io/doodlejs/)
