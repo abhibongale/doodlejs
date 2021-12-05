@@ -1,15 +1,17 @@
 # DoodleJs - Doodle Classifier Using Tensorflow.js
 ![](https://img.shields.io/badge/tensorflow%2Cjs-v2.0-yellow) ![](https://img.shields.io/badge/p5.js-v1.4-yellow) ![](https://img.shields.io/badge/build-passing-yellowgreen)
 
-Simple Doodle Classifier which recognize the three category a bird, a flower, & a cat.
+Simple Doodle Classifier which recognize the three categories a bird, a flower, & a cat.
 
 ## Table of Content
 * [General info](#general-info)
 * [Technologies](#technologies)
 * [Launch](#launch)
 * [Reference](#reference)
-* 
+
 ## General info
+1. Model is trained on three datasets (flower, bird, & cat).
+2. Model is three layer dense model.
 
 ## Technologies
 1. (Tensorflow.js v2.0)[https://www.tensorflow.org/]
