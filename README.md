@@ -1,6 +1,6 @@
 ![image](https://user-images.githubusercontent.com/29818855/144809194-13a46474-b5db-4629-8b08-fe344d24939f.png)
 
-# [RUN Doodlejs!!](https://abhibongale.github.io/doodlejs/)
+## [RUN Doodlejs!!](https://abhibongale.github.io/doodlejs/)
 
 
 # DoodleJs - Doodle Classifier Using Tensorflow.js
